@@ -16,6 +16,7 @@ th, td{
 .item_edit:hover,
 .item_delete:hover{
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
 .item_add{
@@ -23,6 +24,7 @@ th, td{
 }
 .item_add:hover{
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
 .form{
@@ -68,10 +70,6 @@ th, td{
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
-
-
-
-
 
 .alert{
   color: rgb(114, 0, 0);
