@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<table class="table" data-table="table">
+  <tr>
+    <td>Товары</td>
+    <td></td>
+    <td class="item_add" data-item="itemAdd">+</td>
+  </tr>
+  <tr>
+    <th>Название</th>
+    <th>Стоимость</th>
+    <th>Действия</th>
+  </tr>
+  <tr id="item_0">
+    <td>iPhone</td>
+    <td>60000</td>
+    <td class="actions">
+      <div class="item_edit" id="edFor_0">&#9998;</div>
+      <div class="item_delete" id="delFor_0">&#215;</div>
+    </td>
+  </tr>
+  <tr id="item_1">
+    <td>Samsung</td>
+    <td>80000</td>
+    <td class="actions">
+      <div class="item_edit" id="edFor_1">&#9998;</div>
+      <div class="item_delete" id="delFor_1">&#215;</div>
+    </td>
+  </tr>
+</table>
+
+<form class="form" data-form="form" novalidate>
+  <div class="form-control">
+    <label class="label" for="item_name">Название</label>
+    <input id="item_name" class="input" type="text" data-input="itemName" autocomplete="off" required>
+  </div>
+  <div class="form-control">
+    <label class="label" for="item_price">Стоимость</label>
+    <input id="item_price" class="input" type="number" min="1" data-input="itemPrice" autocomplete="off" required>
+  </div>
+  <div>
+    <button type="submit" class="btn">Сохранить</button>
+    <button type="reset" class="btn">Отмена</button>
+  </div>
+</form>
+
+</body>
+</html>
