@@ -7,13 +7,12 @@ test('Creating table', () => {
   const expected = { // ожидает
     itemAdd: document.querySelector('[data-item=itemAdd]'),
     form: document.querySelector('[data-form=form]'),
-    itemPrice: document.querySelector('[data-input=itemPrice]'),
-    itemName: document.querySelector('[data-input=itemName]'),
     table: document.querySelector('[data-id=table]'),
     idCount: 2,
     editing: false,
     itemEdit: '',
     errorMes: false,
+    editForm: null,
   };
 
   const received = inputTable; // получает
