@@ -13,16 +13,16 @@ th, td{
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.item_edit:hover,
-.item_delete:hover{
+.itemEdit:hover,
+.itemDelete:hover{
   border-bottom: 1px solid black;
   cursor: pointer;
 }
 
-.item_add{
+.itemAdd{
   text-align: right;
 }
-.item_add:hover{
+.itemAdd:hover{
   border-bottom: 1px solid black;
   cursor: pointer;
 }
@@ -39,7 +39,7 @@ th, td{
   top: 20%;
   left: calc(50% - 180px);
 
-  display: none;
+  /* display: none; */
 }
 .label{
   margin-bottom: 10px;
@@ -59,10 +59,10 @@ th, td{
 }
 
 
-.form-control {
+.formControl {
   position: relative;
 }
-.form-error {
+.formError {
   position: absolute;
   padding: 5px 10px;
   width: 200px;

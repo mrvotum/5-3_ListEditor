@@ -1,4 +1,4 @@
-import TableList from './class_TableList';
+import TableList from './TableList';
 
 const table = new TableList('table');
 table.create();
