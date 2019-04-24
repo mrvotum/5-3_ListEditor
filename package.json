@@ -4,7 +4,9 @@
   "description": "5 lesson, 3 task",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --coverage",
+    "coverage": "jest --testPathPattern='./src/' --coverage",
+    "e2e": "jest --testPathPattern='./__tests__/'",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "doc": "jsdoc -c jsdoc.conf.json",
