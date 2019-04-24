@@ -41,23 +41,23 @@ describe('Click to button', () => {
     // TODO:
   });
 
-  // test('should add new object', async () => {
-  //   await page.goto(baseUrl);
+  test('should add new object', async () => {
+    await page.goto(baseUrl);
 
-  //   const btn = await page.$('[data-item=itemAdd]');
-  //   btn.click();
-  //   const form = await page.waitForSelector('[data-form=form]');
+    const btn = await page.$('[data-item=itemAdd]');
+    btn.click();
+    const form = await page.waitForSelector('[data-form=form]');
 
-  //   const itemName = await page.waitForSelector('[data-input=itemName]');
-  //   const itemPrice = await page.waitForSelector('[data-input=itemPrice]');
-  //   itemName.value = 'item name';
-  //   itemPrice.value = '10000';
+    const itemName = await page.waitForSelector('[data-input=itemName]');
+    const itemPrice = await page.waitForSelector('[data-input=itemPrice]');
+    itemName.value = 'item name';
+    itemPrice.value = '10000';
 
-  // eslint-disable-next-line max-len
-  //   const btnSubmit = form.querySelector('[data-id=submit]'); // .waitForSelector('[data-id=submit]');
-  //   btnSubmit.click();
+    // eslint-disable-next-line max-len
+    const btnSubmit = await page.$('[data-id=submit]'); // .waitForSelector('[data-id=submit]');
+    btnSubmit.click();
 
-  //   await page.waitForSelector('[data-id=item_2]');
-  //   // TODO:
-  // });
+    await page.$('[data-id=item_2]');
+    // TODO:
+  });
 });
