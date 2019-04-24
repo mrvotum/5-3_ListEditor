@@ -46,7 +46,7 @@ describe('Click to button', () => {
 
     const btn = await page.$('[data-item=itemAdd]');
     btn.click();
-    const form = await page.waitForSelector('[data-form=form]');
+    // const form = await page.waitForSelector('[data-form=form]');
 
     const itemName = await page.waitForSelector('[data-input=itemName]');
     const itemPrice = await page.waitForSelector('[data-input=itemPrice]');
