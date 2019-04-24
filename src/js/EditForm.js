@@ -5,6 +5,7 @@ export default class EditForm {
     this.itemName = document.querySelector('[data-input=itemName]');
     this.editing = null;
     this.itemEdit = itemEdit;
+    this.idCount = 2;
   }
 
   create(name, price, editing) {
@@ -22,8 +23,8 @@ export default class EditForm {
       <input id="itemPrice" class="input" type="number" min="1" data-input="itemPrice" autocomplete="off" required value=${price}>
     </div>
     <div>
-      <button type="submit" class="btn">Сохранить</button>
-      <button type="reset" class="btn">Отмена</button>
+      <button data-id="submit" type="submit" class="btn">Сохранить</button>
+      <button data-id="reset" type="reset" class="btn">Отмена</button>
     </div>`;
 
     this.table.appendChild(this.formEl);
@@ -72,6 +73,7 @@ export default class EditForm {
           this.editing = false;
         } else {
           const trEl = document.createElement('tr');
+          trEl.setAttribute('data-id', `item_${this.idCount}`);
           trEl.id = `item_${this.idCount}`;
           trEl.innerHTML = `<td>${name}</td>
             <td>${price}</td>

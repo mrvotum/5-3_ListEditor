@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import TableList from '../src/js/TableList';
+import TableList from '../TableList';
 
 test('Creating table', () => {
   const inputTable = new TableList('table');
