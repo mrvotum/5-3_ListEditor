@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const puppeteer = require('puppeteer');
 const { fork } = require('child_process');
 
@@ -52,6 +53,7 @@ describe('Click to button', () => {
   //   itemName.value = 'item name';
   //   itemPrice.value = '10000';
 
+  // eslint-disable-next-line max-len
   //   const btnSubmit = form.querySelector('[data-id=submit]'); // .waitForSelector('[data-id=submit]');
   //   btnSubmit.click();
 
