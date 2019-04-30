@@ -2,7 +2,8 @@
 import TableList from '../TableList';
 
 test('Creating table', () => {
-  const inputTable = new TableList('table');
+  const root = document.querySelector('[data-id=widget]');
+  const inputTable = new TableList(root);
 
   const expected = { // ожидает
     itemAdd: document.querySelector('[data-item=itemAdd]'),

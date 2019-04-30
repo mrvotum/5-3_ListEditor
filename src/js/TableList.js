@@ -2,9 +2,9 @@ import EditForm from './EditForm';
 
 export default class TableList {
   constructor(parent) {
-    this.table = document.querySelector(`[data-id=${parent}]`);
-    this.itemAdd = this.table.querySelector('[data-item=itemAdd]');
-    this.form = this.table.querySelector('[data-form=form]');
+    this.itemAdd = document.querySelector('[data-item=itemAdd]');
+    this.form = document.querySelector('[data-form=form]');
+    this.table = parent;
     this.idCount = 2;
     this.editing = false;
     this.itemEdit = '';
