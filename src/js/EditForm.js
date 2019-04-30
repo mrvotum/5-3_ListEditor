@@ -1,8 +1,8 @@
 export default class EditForm {
-  constructor(itemEdit) {
-    this.table = document.querySelector('[data-id=table]');
-    this.itemPrice = document.querySelector('[data-input=itemPrice]');
-    this.itemName = document.querySelector('[data-input=itemName]');
+  constructor(parent, itemEdit) {
+    this.table = parent;
+    this.itemPrice = parent.querySelector('[data-input=itemPrice]');
+    this.itemName = parent.querySelector('[data-input=itemName]');
     this.editing = null;
     this.itemEdit = itemEdit;
     this.idCount = 2;

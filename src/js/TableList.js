@@ -2,9 +2,9 @@ import EditForm from './EditForm';
 
 export default class TableList {
   constructor(parent) {
-    this.itemAdd = document.querySelector('[data-item=itemAdd]');
-    this.form = document.querySelector('[data-form=form]');
     this.table = document.querySelector(`[data-id=${parent}]`);
+    this.itemAdd = this.table.querySelector('[data-item=itemAdd]');
+    this.form = this.table.querySelector('[data-form=form]');
     this.idCount = 2;
     this.editing = false;
     this.itemEdit = '';
@@ -20,7 +20,7 @@ export default class TableList {
   // создать форму для добавления информации
   addListenerAddItem() {
     this.itemAdd.addEventListener('click', () => {
-      this.editForm = new EditForm();
+      this.editForm = new EditForm(this.table);
       this.editForm.create('', '');
     });
   }
@@ -40,7 +40,7 @@ export default class TableList {
         const name = this.itemEdit.children[0].textContent;
         const price = Number(this.itemEdit.children[1].textContent);
 
-        this.editForm = new EditForm(this.itemEdit);
+        this.editForm = new EditForm(this.table, this.itemEdit);
         this.editing = true;
         this.editForm.create(name, price, this.editing);
       }
